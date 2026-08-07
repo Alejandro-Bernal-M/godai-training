@@ -9,21 +9,24 @@ const WHATSAPP_NUMBER = "573146594963";
 const staticPlans = [
   {
     key: "foundation",
-    price: "$90",
+    priceAud: "$90 AUD",
+    priceUsd: "$60 USD",
     icon: Mountain,
     highlighted: false,
     featureKeys: ["f1", "f2", "f3", "f4", "f5"],
   },
   {
     key: "performance",
-    price: "$120",
+    priceAud: "$120 AUD",
+    priceUsd: "$80 USD",
     icon: Flame,
     highlighted: true,
     featureKeys: ["f1", "f2", "f3", "f4", "f5", "f6"],
   },
   {
     key: "mastery",
-    price: "$150",
+    priceAud: "$150 AUD",
+    priceUsd: "$100 USD",
     icon: Crown,
     highlighted: false,
     featureKeys: ["f1", "f2", "f3", "f4", "f5", "f6"],
@@ -98,13 +101,15 @@ export default function TrainingPaths() {
                 </div>
 
                 <div className="mb-6">
-                  <span className="text-5xl font-black text-white">
-                    {plan.price}
+                  <span className="text-4xl font-black text-white">
+                    {plan.priceAud}
+                  /
+                  </span>
+                  <br />
+                  <span className="text-4xl font-black text-white">
+                    {plan.priceUsd}
                   </span>
 
-                  <span className="text-zinc-400 ml-1">
-                    {t("pricing.period")}
-                  </span>
                 </div>
 
                 <p className="mb-4 text-xl font-semibold text-white">
